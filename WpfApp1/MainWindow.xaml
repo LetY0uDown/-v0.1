@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Сказ о лёхе" Height="600" Width="450" Background="#FFB4B4B4"
+        WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" Background="#FF14145A"/>
+
+        <TextBlock Grid.Row="2" Text="Похождения лёхи" x:Name="textCatJourney"
+                   FontSize="22" Foreground="DarkMagenta"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center" FontFamily="Arial"/>
+        <TextBlock Grid.Row="0" Text="Лёха Пожиратель Миров"
+                   FontSize="32" Foreground="DarkMagenta"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Image Grid.Row="1"
+               Source="CatUniverseEater.jpg"/>
+
+        <Button Grid.Row="3" x:Name="bStartJourney" Click="bStartJourney_Click"
+                Content="Начать приключения Лёхи"
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                FontSize="32"/>
+    </Grid>
+</Window>
